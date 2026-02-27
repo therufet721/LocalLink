@@ -9,6 +9,7 @@ lerna-debug.log*
 
 node_modules
 locallink-temp
+src-tauri/target
 dist
 dist-ssr
 *.local
