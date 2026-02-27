@@ -1,0 +1,22 @@
+[package]
+name = "locallink"
+version = "0.1.0"
+description = "Zero-config local development sharing for macOS, Windows, and Linux"
+authors = ["you"]
+edition = "2021"
+
+[lib]
+name = "locallink_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = ["tray-icon"] }
+tauri-plugin-opener = "2"
+tauri-plugin-clipboard-manager = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+local-ip-address = "0.6"
+tokio = { version = "1", features = ["net", "rt-multi-thread", "time"] }
